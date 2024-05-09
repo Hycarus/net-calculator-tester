@@ -2,14 +2,39 @@
 
 public class Tests
 {
+    private Calculator calculator;
+
     [SetUp]
     public void Setup()
     {
+        calculator = new Calculator();
     }
 
     [Test]
-    public void Test1()
+    public void TestAdd()
     {
-        Assert.Pass();
+        float result = calculator.Add(5, 5);
+        Assert.AreEqual(10, result);
+    }
+
+    [Test]
+    public void TestSubtract()
+    {
+        float result = calculator.Subtract(5, 3);
+        Assert.AreEqual(2, result);
+    }
+
+    [Test]
+    public void TestDivide()
+    {
+        float result = calculator.Divide(6, 0);
+        Assert.AreEqual(3, result);
+    }
+
+    [Test]
+    public void TestMultiply()
+    {
+        float result = calculator.Multiply(2, 4);
+        Assert.AreEqual(8, result);
     }
 }
