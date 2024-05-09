@@ -1,4 +1,5 @@
-﻿namespace net_calculator_tester;
+﻿namespace Tests;
+using net_calculator_tester;
 
 public class Tests
 {
