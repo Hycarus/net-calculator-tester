@@ -27,7 +27,7 @@ public class Tests
     [Test]
     public void TestDivide()
     {
-        float result = calculator.Divide(6, 0);
+        float result = calculator.Divide(6, 2);
         Assert.AreEqual(3, result);
     }
 
@@ -36,5 +36,11 @@ public class Tests
     {
         float result = calculator.Multiply(2, 4);
         Assert.AreEqual(8, result);
+    }
+
+    [Test]
+    public void TestDividedByZero()
+    {
+        Assert.Throws<DivideByZeroException>(() => calculator.Divide(5, 0));
     }
 }
